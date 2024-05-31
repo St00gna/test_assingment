@@ -1,0 +1,22 @@
+@import '../common/mixins'
+@import '../common/vars'
+
+.input-group
+    position: relative
+
+    .input-group__input
+        width: 100%
+        padding: 14px 0px 14px 16px
+        box-sizing: border-box
+
+    .input-group__input.filled + .input-group__placeholder
+        top: -15px
+        background-color: $background_color
+        padding: 2px 4px
+    
+    .input-group__placeholder
+        position: absolute
+        top: 18px
+        left: 16px
+        padding: 0
+        transition: 0.3s

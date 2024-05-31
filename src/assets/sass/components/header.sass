@@ -1,0 +1,36 @@
+@import '../common/mixins'
+
+.header
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    height: 60px !important
+        
+    .header__img
+        align-self: center
+        display: flex
+        gap: 10px
+        
+    .header_button-group
+        align-self: center
+        justify-self: right
+        display: flex
+        gap: 10px
+
+        .header_button-group__button
+            width: 100px
+            height: 34px
+
+
+    +respond-to('phones')
+        padding: 0 16px
+    
+    +respond-to('tablets')
+        padding: 0 32px
+
+    +respond-to('laptops')
+        padding: 0 60px
+        
+    +respond-to('pc')
+        padding: 0 695px
+
+

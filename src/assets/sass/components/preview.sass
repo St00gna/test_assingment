@@ -1,0 +1,63 @@
+@import '../common/mixins'
+
+.preview
+    background-size: cover 
+    background-repeat: no-repeat
+    
+    .filter
+        background-color: rgba(0, 0, 0, 0.5)
+
+        .preview-content__title
+            padding-bottom: 21px
+
+        .preview-content__text
+            padding-bottom: 32px
+
+    .preview-content__title, .preview-content__text
+        color: rgba(255, 255, 255, 1)
+        text-align: center
+        
+    .preview-content
+        display: grid
+
+        .preview-content__button
+            width: 100px
+            height: 34px
+            justify-self: center
+
+    +respond-to('phones')
+        height: 500px
+
+        .filter
+            height: 500px
+            padding: 40px 16px 71px 16px
+
+            .preview-content
+                
+                .preview-content__title
+                    padding-bottom: 21px
+
+                .preview-content__text
+                    padding-bottom: 32px
+
+    +respond-to('tablets')
+        height: 500px
+        
+        .filter
+            height: 500px
+            padding: 89px 194px 88px 194px
+            
+    +respond-to('laptops')
+        height: 650px
+        
+        .filter
+            height: 650px
+            padding: 164px 322px 163px 322px  
+            
+    +respond-to('pc')
+        height: 650px
+        
+        .filter
+            height: 650px
+            padding: 164px 322px 163px 322px  
+            

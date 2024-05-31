@@ -1,0 +1,56 @@
+@import '../common/mixins'
+@import './tooltip'
+.card
+    background-color: rgba(255, 255, 255, 1)
+    border: none !important
+    padding: 20px
+    width: 100% !important
+    display: grid !important
+    justify-items: center
+    gap: 20px
+    overflow-x: auto
+    overflow-y: hidden
+
+    .card-header    
+        padding: 0 !important
+        background-color: unset
+        border: none !important
+
+        .card-header__img
+            width: 70px
+            height: 70px
+            border-radius: 50px !important
+
+    .card-footer
+        background-color: unset
+        border: none !important
+        padding: 0 !important
+
+.tooltip-custom
+    +tooltip()
+
++respond-to('phones')
+    .content__cards
+        display: grid
+        gap: 20px
+
++respond-to('tablets')
+    
+    .content__cards
+        grid-template-columns: repeat(2, 1fr)
+        display: grid
+        gap: 16px
+
++respond-to('laptops')
+
+    .content__cards
+        grid-template-columns: repeat(2, 1fr)
+        display: grid
+        gap: 29px
+
++respond-to('pc')
+
+    .content__cards
+        grid-template-columns: repeat(2, 1fr)
+        display: grid
+        gap: 29px

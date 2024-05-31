@@ -1,0 +1,52 @@
+@import './vars'
+@import './font'
+@import '../components/header'
+@import '../components/main'
+@import '../components/footer'
+
+.button-group
+    display: flex
+.button 
+    border-radius: $button_border-radius
+    line-height: $p_lineheight
+    font-size: $p_size
+    border: none
+    cursor: pointer
+    height: 34px
+
+    &:active
+        border: none
+
+.button-yellow
+    background-color: $primary_color
+    color: $primary_button_text
+
+    &:hover
+        background-color: $hover_primary_color
+
+.button-disabled 
+    background-color: $disabled_color
+    color: $disabled_button_text
+    cursor: default
+h1 
+    font-size: $h1_size !important
+    line-height: $h1_lineheight !important
+    margin: 0 !important
+p
+    font-size: $p_size !important
+    line-height: $p_lineheight !important
+    margin: 0 !important
+
+::-webkit-scrollbar 
+  width: 5px
+  height: 5px
+
+::-webkit-scrollbar-track 
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb 
+  background: #7a7a7a
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb:hover 
+  background: #3e3e3e

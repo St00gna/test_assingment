@@ -1,0 +1,51 @@
+@import '../common/mixins'
+@import './preview'
+@import './card'
+@import './form'
+@import './dynamicInput'
+@import './preloader'
+
+.main
+    background-color: $background_color
+
+    .article
+        display: grid
+        gap: 140px
+            
+        .content
+            text-align: center
+            display: grid
+            gap: 50px
+            position: relative
+
+            .content__title
+                color: $primary_button_text
+
+            .content__button
+                width: 120px
+                justify-self: center
+
+    .success-register
+        width: 100%
+        display: grid
+        justify-items: center
+        gap: 50px
+        max-width: 1024px
+        height: 380px
+
+
+    +respond-to('phones')
+
+    .container
+        padding: 0 16px
+
+    +respond-to('tablets')
+        .container
+            padding: 0 32px
+            max-width: 100%
+
+    +respond-to('pc')
+        .article
+            margin: 0 695px
+    
+    

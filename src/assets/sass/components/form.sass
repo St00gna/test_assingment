@@ -1,0 +1,116 @@
+@import '../common/mixins'
+@import '../common/vars'
+
+.user-form
+    color: $input_color
+
+    .error_text 
+        color: $error_color
+        font-size: $error_size !important
+        line-height: $error_lineheight !important
+        padding-left: 16px
+        padding-top: 4px
+    
+    .errorClass
+        border: 2px solid $error_color !important
+
+
+    input[type="text"], input[type="email"], input[type="tel"]
+        font-size: $p_size
+        line-height: $p_lineheight
+        border: $input_border
+        border-radius: $input_border-radius
+        background-color: $background_color
+
+    .user-form-mainDate
+        display: grid
+        gap: 50px
+    
+    .user-form-position
+        display: grid
+        justify-items: left
+        margin-bottom: 47px
+
+    .form-check-input
+        width: 20px
+        height: 20px
+        --bs-form-check-bg-image: none
+        border: 1px solid rgba(0, 189, 211, 1)
+        margin-right: 12px
+
+        &:checked[type=radio]
+            box-shadow: inset 0px 0px 0px 5px white
+            background: rgba(0, 189, 211, 1)    
+            border: 1px solid rgba(0, 189, 211, 1)
+    
+    .user-form__label-for-tel
+        display: block // seperate label from content at the bottom
+        font-size: 12px
+        line-height: 14px
+        margin: 4px 0 25px 16px
+        text-align: left
+    
+    .user-form__text
+            color: $primary_button_text
+
+    .upload-file
+        margin-top: 47px
+        height: 54px    
+        text-align: left
+        position: relative
+
+        input[type="file"]
+            opacity: 0
+            position: absolute
+            width: 83px
+            left: 0
+            height: 54px
+        
+        .upload-file__label
+            display: flex
+            flex-direction: row
+
+            .upload-file__label__uploadButton
+                width: 83px
+                height: 54px
+                border: 1px solid $primary_button_text
+                border-radius: 4px 0px 0px 4px
+                padding: 14px 15px
+                color: $primary_button_text 
+
+            .upload-file__label__fileName
+                width: calc(328px - 83px)
+                height: 54px
+                border: $input_border
+                color: $input_color
+                border-radius: 0px 4px 4px 0px
+                padding: 14px 0px
+                padding-left: 16px
+                overflow: hidden
+                white-space: pre
+    
+    +respond-to('tablets')
+        padding-right: 162px
+        padding-left: 162px
+
+        input[type="file"]
+            opacity: 0
+            position: absolute
+            width: 83px
+            left: 239px
+            height: 54px
+
+    +respond-to('laptops')
+        padding-right: 262px
+        padding-left: 262px
+
+    +respond-to('pc')
+        padding-right: 395px
+        padding-left: 395px
+
+        
+
+            
+
+
+        
